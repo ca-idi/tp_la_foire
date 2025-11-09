@@ -1,0 +1,90 @@
+{
+  "info": {
+    "name": "La Foire API collection",
+    "_postman_id": "la-foire-sample",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"prenom\": \"Alice\", \"email\": \"alice@example.com\", \"password\": \"pass123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/add",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "users",
+            "add"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Article",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Manege\", \"content\": \"Un super man\\u00e8ge\", \"price\": 49.99, \"img\": \"https://picsum.photos/200\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/articles/add",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "articles",
+            "add"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Avis",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"rating\": 5, \"comment\": \"Genial\", \"user\": \"<USER_ID>\", \"article\": \"<ARTICLE_ID>\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/avis/add",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "avis",
+            "add"
+          ]
+        }
+      }
+    }
+  ]
+}
